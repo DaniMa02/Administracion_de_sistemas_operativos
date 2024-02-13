@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Introduce el nombre del directorio que quieres comprimir"
+read directorio
+if [ -d "$directorio" ]
+then
+	fecha=$(date +"%Y-%m-%d")
+	nombrearchivo="$fecha$directorio.tar.gz"
+
+tar -czf "$nombrearchivo" "$directorio"
+echo "Se ha comprimido el directorio '$directorio' con el nombre '$nombrearchivo'."
+else
+echo "El directorio no existe."
+fi

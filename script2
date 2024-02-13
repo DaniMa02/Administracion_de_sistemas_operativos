@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Introduce un número"
+read num1
+echo "Introduce otro número"
+read num2
+if  ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1
+then 
+	echo "No has introducido dos números válidos"
+else
+	if [[ $num1 -gt $num2 ]]
+	then
+	echo "$num1 es mayor que $num2"
+	else
+	echo "$num2 es mayor que $num1"
+	fi
+fi

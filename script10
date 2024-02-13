@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Introduce un número"
+read num
+	if  ! expr "$num" + 1 >/dev/null 2>&1
+	then
+		echo "No has introducido un número"
+	else
+		echo "La tabla de multiplicar del $num es:"
+
+		for i in $(seq 1 10) 
+			do
+				resultado=$((num * i))
+				echo "$num x $i = $resultado"
+			done
+	fi

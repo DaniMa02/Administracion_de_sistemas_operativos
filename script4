@@ -1,0 +1,91 @@
+#!/bin/bash
+
+function suma {
+		if ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1 
+			then
+				echo "No has introducido dos números."
+		else
+				suma=$(($num1+$num2))
+				echo "El resultado de su operación es: $suma"
+		fi
+sleep 3
+clear
+menu
+}
+function resta {
+		if ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1 
+			then
+				echo "No has introducido dos números."
+		else
+				suma=$(($num1-$num2))
+				echo "El resultado de su operación es: $suma"
+		fi
+sleep 3
+clear
+menu
+}
+function multiplicacion {
+		if ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1 
+			then
+				echo "No has introducido dos números."
+		else
+				suma=$(($num1*$num2))
+				echo "El resultado de su operación es: $suma"
+		fi
+sleep 3
+clear
+menu
+}
+function division {
+		if ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1 
+			then
+				echo "No has introducido dos números."
+		else
+				suma=$(($num1/$num2))
+				echo "El resultado de su operación es: $suma"
+		fi
+sleep 3
+clear
+menu
+}
+
+
+
+
+
+function menu {
+echo "Selecciona una opción:"
+echo "1. Sumar"
+echo "2. Restar"
+echo "3. Multiplicar"
+echo "4. Dividir"
+echo "5. Salir del menú"
+read opcion
+case $opcion in 
+	1)echo "Introduce el primer número"
+	read num1
+	echo "Introduce el segundo número"
+	read num2
+	suma;;	
+	2)echo "Introduce el primer número"
+	read num1
+	echo "Introduce el segundo número"
+	read num2
+	resta;;	
+	3)echo "Introduce el primer número"
+	read num1
+	echo "Introduce el segundo número"
+	read num2
+	multiplicacion;;	
+	4)echo "Introduce el primer número"
+	read num1
+	echo "Introduce el segundo número"
+	read num2
+	division;;
+	5)echo "Saliendo del menú"
+	sleep 2
+	exit
+esac
+}
+menu
+ 

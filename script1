@@ -1,0 +1,15 @@
+#!bin/bash
+echo "Introduce el primer número: "
+read  num1
+echo "Introduce el segundo número: "
+read num2
+
+
+if  ! expr "$num1" + 1 >/dev/null 2>&1 || ! expr "$num2" + 1  >/dev/null 2>&1
+then 
+	echo "No has introducido dos números"
+	else
+	media=$((($num1 + $num2) / 2))
+
+	echo "La media de $num1 y $num2 es: $media"
+	fi

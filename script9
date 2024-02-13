@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Introduce el nombre del archivo al que quieres modificarle los permisos:"
+read archivo
+
+if [ -f "$archivo" ]
+then
+ls -l "$archivo"
+chmod 111 "$archivo"
+echo "Los permisos de tu archivo '$archivo' han sido modificados y son los siguientes:"
+ls -l "$archivo"
+
+else
+echo "El nombre de archivo introducido no corresponde con el de un archivo común"
+fi
+

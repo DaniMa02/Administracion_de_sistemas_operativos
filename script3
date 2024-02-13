@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Introduce una cadena"
+read cadena
+
+echo "$cadena" >>  prueba.txt
+echo "Has actualizado el fichero."
+echo "El contenido actual de tu fichero es:"
+cat prueba.txt

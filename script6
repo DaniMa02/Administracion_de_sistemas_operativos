@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function existe {
+echo "Introduce el nombre de un fichero"
+read fichero
+if [ -f  "$fichero" ]
+	then
+	echo "Los permisos sin modificar de tu fichero son: "
+	ls -l "$fichero"
+	chmod 744 "$fichero"
+	echo "Los permisos de tu fichero '$fichero' se han cambiado y son los siguientes: "
+	ls -l "$fichero"
+else
+	echo "El fichero no existe"
+fi
+}
+
+existe
