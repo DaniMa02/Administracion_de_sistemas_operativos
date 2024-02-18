@@ -13,3 +13,6 @@
 |[Script8](/script8)|Script que muestra la tabla de multiplicar escrita de manera inversa del número introducido|
 |[Script9](/script9)|Script que recibe el nombre de un fichero, comprueba que exista y sea un fichero común y modifica sus permisos|
 |[Script10](/script10)|Script que muestra la tabla de multiplicar del número introducido utilizando bucles y seq|
+|[Script11](/script11)|Script que determina si una palabra es palíndroma o no|
+|[Script12](/script12)|Script que suma el tamaño de todos los ficheros regulares que se encuentran dentro de un directorio|
+
